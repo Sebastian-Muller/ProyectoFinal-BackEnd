@@ -1,6 +1,6 @@
 const mongoose  = require ("mongoose");
 
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
 const pokemonSchema = new Schema ({
     pokedex:{
@@ -20,7 +20,7 @@ const pokemonSchema = new Schema ({
         type: Number,
         required: true
     }
-})
+});
 
 
 const Pokemon = mongoose.model("Pokemon",pokemonSchema);

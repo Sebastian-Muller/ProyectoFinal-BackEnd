@@ -4,9 +4,10 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
-const pokemonsRouter = required('./routes/pokemons')
-      
+const pokemonsRouter = require('./routes/pokemons');
+
+const connect=require('./db/db');
+
 const app = express();
 
 //MIDDLEWARES
@@ -18,7 +19,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //RUTAS
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use("/pokemons", pokemonsRouter)
+
+connect();
 
 module.exports = app;
