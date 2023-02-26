@@ -18,7 +18,7 @@ const pokemonSchema = new Schema ({
     },
     level:{
         type: Number,
-        required: true
+        required: false
     }
 });
 

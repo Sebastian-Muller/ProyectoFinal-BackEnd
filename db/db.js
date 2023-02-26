@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const connect = async () => {
     try {
-        await mongoose.conect(
+        await mongoose.connect(
             "mongodb+srv://sebamuller13:seba1234@cluster0.pyhnmiu.mongodb.net/test"
         );
         console.log("Conectado a la base de datos...");
@@ -11,4 +11,4 @@ const connect = async () => {
     }
 };
 
-module.export = connect;
+module.exports = connect;
